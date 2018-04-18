@@ -4,35 +4,35 @@
 				<tr>
 					<td class="title">主营业务</td>
 					<td class="txtArea">
-						<el-input class="inputArea" type="textarea" @change="valueChange" v-model="$store.state.operateDetail.business"></el-input>
+						<el-input class="inputArea" type="textarea" :maxlength="5" @change="valueChange" v-model="$store.state.operateDetail.business"></el-input>
 						<p class="txtLimit">{{businessLength}}/100</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="title">融资用途</td>
 					<td class="txtArea">
-						<el-input class="inputArea" type="textarea" @change="valueChange" v-model="$store.state.operateDetail.purpose"></el-input>
+						<el-input class="inputArea" type="textarea" :maxlength="100" @change="valueChange" v-model="$store.state.operateDetail.purpose"></el-input>
 						<p class="txtLimit">{{purposeLength}}/100</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="title">融资方式</td>
 					<td class="txtArea">
-						<el-input class="inputArea" type="textarea" @change="valueChange" v-model="$store.state.operateDetail.mode"></el-input>
+						<el-input class="inputArea" type="textarea" :maxlength="100" @change="valueChange" v-model="$store.state.operateDetail.mode"></el-input>
 						<p class="txtLimit">{{modeLength}}/100</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="title">退出方式</td>
 					<td class="txtArea">
-						<el-input class="inputArea" type="textarea" @change="valueChange" v-model="$store.state.operateDetail.exitMode"></el-input>
+						<el-input class="inputArea" type="textarea" :maxlength="100" @change="valueChange" v-model="$store.state.operateDetail.exitMode"></el-input>
 						<p class="txtLimit">{{exitModeLength}}/100</p>
 					</td>
 				</tr>
 				<tr>
 					<td class="title">注释</td>
 					<td class="txtArea">
-						<el-input class="inputArea" type="textarea" @change="valueChange" v-model="$store.state.operateDetail.remarks"></el-input>
+						<el-input class="inputArea" type="textarea" :maxlength="100" @change="valueChange" v-model="$store.state.operateDetail.remarks"></el-input>
 						<p class="txtLimit">{{remarksLength}}/100</p>
 					</td>
 				</tr>

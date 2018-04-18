@@ -26,11 +26,22 @@
 		    	<div class="itemTitle">项目资料</div>
 		    	<projectInfo></projectInfo>
 		    </el-tab-pane>
-		    <el-tab-pane label="项目进展" name="second"></el-tab-pane>
-		    <el-tab-pane label="投资人" name="third">3333333333333</el-tab-pane>
+		    <el-tab-pane label="项目进展" name="second">
+		    	<projectProgress></projectProgress>
+		    </el-tab-pane>
+		    <el-tab-pane label="投资人" name="third">
+		    	<investor></investor>
+		    </el-tab-pane>
 		    <el-tab-pane label="融资回报" name="fourth">333333333</el-tab-pane>
 		</el-tabs>
-		<!-- <el-button type="primary" @click="save">保存</el-button> -->
+		<div style="margin-left:200px">
+			<el-button type="primary" @click="save">保存</el-button>
+			<el-button type="primary" @click="">发布</el-button>
+			<el-button type="warning" @click="">下线</el-button>
+			<el-button type="warning" @click="">取消首页精选</el-button>
+			<el-button type="primary" @click="">手动成立</el-button>
+			<el-button type="primary" @click="">手动失败</el-button>
+		</div>
 	</div>
 </template>
 <script>
@@ -40,10 +51,12 @@ import factor from './factor'
 import financeInfo from './financeInfo'
 import financeReturn from './financeReturn'
 import projectInfo from './projectInfo'
+import projectProgress from './projectProgress'
+import investor from './investor'
 	export default{
 		data(){
 			return{
-				activeName:'first',
+				activeName:'third',
 				
 			}
 
@@ -61,13 +74,13 @@ import projectInfo from './projectInfo'
 			}
 			
 		},
-		components:{factor,financeInfo,financeReturn,projectInfo}
+		components:{factor,financeInfo,financeReturn,projectInfo,projectProgress,investor}
 	}
 </script>
 <style>
 .projectDetail{width: 80%;margin: auto;}
-.projectDetail table{width:100%;border:1px solid #ddd;border-collapse: collapse;margin: 20px 0;}
-.projectDetail table td{border:1px solid #ddd;padding:5px 7px;text-align: center;color:#666;}
-.projectDetail table .title{color:#333;width: 200px;background: #f5f5f5;}
-.projectDetail table img{width: 80px;height: 40px;margin:0 5px;}
+.infoTable{width:100%;border:1px solid #ddd;border-collapse: collapse;margin: 20px 0;}
+.infoTable td{border:1px solid #ddd;padding:5px 7px;text-align: center;color:#666;}
+.infoTable .title{color:#333;width: 200px;background: #f5f5f5;}
+.infoTable img{width: 80px;height: 40px;margin:0 5px;}
 </style>
