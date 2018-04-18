@@ -1,0 +1,389 @@
+﻿.ax_default {
+  font-family:'Arial Normal', 'Arial';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  color:#404B56;
+  text-align:center;
+  line-height:normal;
+}
+._输入框 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+}
+._面板2 {
+}
+._线框面板 {
+}
+._矩形2 {
+  font-size:12px;
+  text-align:center;
+}
+._矩形3 {
+}
+.paragraph {
+  text-align:left;
+}
+.heading_1 {
+  font-family:'Arial Negreta', 'Arial Normal', 'Arial';
+  font-weight:700;
+  font-style:normal;
+  font-size:32px;
+  text-align:left;
+}
+.shape {
+}
+._图片 {
+  color:#000000;
+}
+.iconfont {
+  font-family:'iconfont Regular', 'iconfont';
+  font-weight:400;
+  font-style:normal;
+  font-size:18px;
+  color:#666666;
+}
+._椭圆形 {
+}
+._占位符 {
+}
+._按钮 {
+  font-size:12px;
+  color:#404B75;
+}
+._主要按钮 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#FFFFFF;
+}
+._后台主要按钮 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#FFFFFF;
+}
+._文字链接 {
+  color:#333333;
+}
+._形状 {
+}
+._一级标题 {
+  font-size:32px;
+  color:#333333;
+  text-align:left;
+}
+._二级标题 {
+  font-size:24px;
+  color:#333333;
+  text-align:left;
+}
+._三级标题 {
+  font-family:'Arial Normal', 'Arial';
+  font-weight:bold;
+  font-style:normal;
+  font-size:18px;
+  text-align:left;
+}
+._四级标题 {
+  font-family:'Arial Normal', 'Arial';
+  font-weight:bold;
+  font-style:normal;
+  font-size:14px;
+  text-align:left;
+}
+._五级标题 {
+  font-family:'Arial Normal', 'Arial';
+  font-weight:bold;
+  font-style:normal;
+  text-align:left;
+}
+._六级标题 {
+  font-family:'Arial Normal', 'Arial';
+  font-weight:bold;
+  font-style:normal;
+  font-size:10px;
+  text-align:left;
+}
+._标签 {
+  font-size:12px;
+  color:#404B75;
+  text-align:left;
+}
+._次级标签 {
+  font-size:12px;
+  color:#999999;
+  text-align:left;
+}
+._文本段落 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#1E1E1E;
+  text-align:left;
+  line-height:24px;
+}
+._流程形状 {
+}
+._线条 {
+}
+.arrow {
+}
+._文本输入框 {
+  font-size:12px;
+  color:#333333;
+  text-align:left;
+}
+.droplist {
+  color:#404B75;
+  text-align:left;
+}
+.list_box {
+  color:#000000;
+  text-align:left;
+}
+._复选框 {
+  text-align:left;
+}
+._单选框 {
+  text-align:left;
+}
+._提交按钮 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  text-align:center;
+}
+._表格 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#707EAE;
+  text-align:center;
+  line-height:20px;
+}
+._连接线 {
+}
+.snapshot {
+}
+._黄便签 {
+  text-align:left;
+}
+.sticky_2 {
+  font-size:12px;
+  text-align:left;
+}
+._图片1 {
+}
+.mini提示面板 {
+}
+._输入框1 {
+}
+.icon {
+}
+.image {
+}
+.text_area {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#29304A;
+  text-align:left;
+}
+._树状菜单 {
+  font-size:12px;
+  color:#333333;
+  text-align:left;
+}
+.menu_item {
+}
+.flow_shape {
+}
+._图片2 {
+}
+.text_field {
+  color:#000000;
+  text-align:left;
+}
+.box_1 {
+}
+.line {
+}
+.label {
+  font-size:14px;
+  text-align:left;
+}
+._表单 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#999999;
+  text-align:left;
+}
+.new_style {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+}
+.tab {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  color:#404B75;
+}
+._2_tab {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+}
+.radio_button {
+  text-align:left;
+}
+.tab1 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  text-align:center;
+}
+.new_style1 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#404B56;
+  text-align:left;
+}
+.tip {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  text-align:left;
+  line-height:20px;
+}
+._页码 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  color:#404B56;
+}
+._输入框左中 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  text-align:left;
+}
+._面板背景 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+}
+._手机验证码 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#3366FF;
+}
+._错误背景 {
+}
+._删除表格按钮 {
+  font-size:12px;
+  color:#FFFFFF;
+}
+._白色背景 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#404B56;
+  text-align:left;
+}
+._隔行表格 {
+  font-size:12px;
+  color:#707EAE;
+}
+.fff面板 {
+}
+._次级文字 {
+  font-size:12px;
+  color:#868686;
+  text-align:right;
+}
+._后台主要按钮1 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:#FFFFFF;
+}
+._头部背景 {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+}
+.menu {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+}
+._有色面板 {
+}
+.f2f2f2 {
+}
+._线框按钮 {
+  font-size:12px;
+  color:#FFFFFF;
+}
+.text_field1 {
+  color:#000000;
+  text-align:left;
+}
+._下拉列表框 {
+  color:#000000;
+  text-align:left;
+}
+._轮播模块 {
+  font-size:72px;
+  color:#C3C9D3;
+}
+._弹出层面板 {
+}
+._弹出面板title {
+}
+.icon1 {
+}
+._成功提示背景 {
+}
+._失败提示背景 {
+}
+.icon2 {
+}
+._成功提示背景1 {
+}
+._失败提示背景1 {
+}
+.box_11 {
+}
+._个人中心tab {
+  font-family:'PingFangSC-Regular', 'PingFang SC';
+  font-weight:400;
+  font-style:normal;
+}
+._提示文字 {
+  font-size:12px;
+  color:#AEAEAE;
+  text-align:center;
+}
+._圆形 {
+}
