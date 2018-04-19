@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div v-show="!isEdit">
         <el-row :gutter="20" style="width: 1220px; margin: 20px auto;">
             <el-col :span="3">
                 <div class="grid-content bg-purple">
@@ -13,7 +14,7 @@
             </el-col>
             <el-col :span="3" >
                 <div class="grid-content bg-purple">
-                    <el-button type="primary"  style="width: 140px;">新增+</el-button>
+                    <el-button type="primary"  style="width: 140px;"  @click="addOrEditBanner('1','')">新增+</el-button>
                 </div>
             </el-col>
         </el-row>
@@ -47,7 +48,7 @@
                 <template slot-scope="scope">
                     <el-button type="primary" size="small" style="width:80px;">停用</el-button>
                     <el-button type="warning" size="small" style="width:80px;">删除</el-button>
-                    <el-button type="primary" size="small" style="width:80px;">编辑</el-button>
+                    <el-button type="primary" size="small" style="width:80px;" @click="addOrEditBanner('1',scope.row)">编辑</el-button>
                 </template>
             </el-table-column>
             <el-table-column
@@ -66,13 +67,17 @@
             style="width: 1220px;margin: 50px auto;text-align: center"
         >
         </el-pagination>
+      </div>
+      <addOrEditBanner v-show="isEdit" @backBannerList="backBannerList"></addOrEditBanner>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+import addOrEditBanner from './addOrEditBanner'
   export default {
     data() {
       return {
+        isEdit:false,
           tableData3: [{
               date: '2016-05-03',
               name: '王小虎',
@@ -119,10 +124,23 @@
         },
         handleSelectionChange(val) {
             this.multipleSelection = val;
+        },
+        //编辑或新增banner type:1编辑 0新增 dataId 新增为空，修改时为修改数据Id
+        addOrEditBanner(type,dataId){
+                if(type=='0'){
+                    this.isEdit = true
+                }else{
+                    //先去请求数据
+                    this.isEdit = true
+                }
+        },
+        backBannerList(){
+          console.log("sss");
+          this.isEdit = false;
         }
 
     },
-    components: {}
+    components: {addOrEditBanner}
   }
 </script>
 

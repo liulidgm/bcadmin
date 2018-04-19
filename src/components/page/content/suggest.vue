@@ -34,7 +34,8 @@
             <el-table-column
                 prop="province"
                 label="反馈内容"
-                width="500">
+                width="500"
+                v-popover:popover1>
             </el-table-column>
             <el-table-column
                 prop="city"
@@ -54,6 +55,14 @@
             style="width: 1220px;margin: 50px auto;text-align: center"
         >
         </el-pagination>
+        <el-popover
+            ref="popover1"
+            placement="top-start"
+            title="标题"
+            width="200"
+            trigger="hover"
+            content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
+        </el-popover>
     </div>
 </template>
 

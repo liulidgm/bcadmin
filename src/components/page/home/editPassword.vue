@@ -1,22 +1,24 @@
 <template>
     <div>
-        <el-dialog title="修改密码" :visible.sync="dialogFormVisible" >
-            <el-form :model="form">
+        <el-dialog title="修改密码" :visible.sync="dialogFormVisible" style="width: 900px;margin:0 auto;">
+            <el-form :model="form" >
                 <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
-                    <el-form-item label="名称">
+                    <el-form-item label="原密码">
                         <el-input v-model="formLabelAlign.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="活动区域">
+                    <el-form-item label="新密码">
                         <el-input v-model="formLabelAlign.region"></el-input>
                     </el-form-item>
-                    <el-form-item label="活动形式">
+                    <el-form-item label="确定密码">
                         <el-input v-model="formLabelAlign.type"></el-input>
                     </el-form-item>
+                    <el-form-item>
+                        <el-button type="primary" size='large' @click="dialogFormVisible = false" style="width:100%;">修 改</el-button>
+                    </el-form-item>
+
                 </el-form>
             </el-form>
-            <div slot="footer" class="dialog-footer">
-                <el-button type="primary" size='large' @click="dialogFormVisible = false">修 改</el-button>
-            </div>
+            <!--<div slot="footer" class="dialog-footer"></div>-->
         </el-dialog>
     </div>
 </template>
@@ -25,7 +27,6 @@
   export default {
     data() {
       return {
-          dialogFormVisible: false,
           labelPosition: 'right',
           formLabelAlign: {
               name: '',

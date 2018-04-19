@@ -54,7 +54,7 @@
 							</el-form-item>
 						</el-form>
 						<div style="margin-left:30px;">
-							<el-button type="primary" @click="query">搜索</el-button>
+							<el-button type="primary" icon="el-icon-search" @click="query">搜索</el-button>
 							<el-button @click="resetForm('formLabelAlign')">清除选项</el-button>
 						</div>
 						<operateTable></operateTable>

@@ -2,10 +2,10 @@
     <div>
         <el-tabs type="border-card">
             <el-tab-pane label="基础信息">
-                <el-row style="width: 900px;margin: 0 auto">
-                    <el-col :span="8">
+                <el-row style="width: 800px;margin: 0 auto">
+                    <el-col :span="9">
                         <div class="grid-content bg-purple">
-                            <img src="" alt="">
+                            <img src="" alt="" style="width: 80px;height: 80px;border: 1px solid #ccc;">
                             <el-upload
                                 class="upload-demo"
                                 action="https://jsonplaceholder.typicode.com/posts/"
@@ -17,35 +17,32 @@
                                 :on-exceed="handleExceed"
                                 :show-file-list="false"
                                 :file-list="fileList">
-                                <el-button size="small" type="primary">点击上传</el-button>
-                                <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+                                <el-button size="small" type="primary">修改头像</el-button>
+                                <!--<div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>-->
                             </el-upload>
                         </div>
                     </el-col>
-                    <el-col :span="16">
+                    <el-col :span="15">
                         <div class="grid-content bg-purple-light">
                            <ul class="user_info">
                                <li>
-                                   <span>名称：</span>
-                                   <span>管理员A</span>
+                                   <span class="name">名称：</span>
+                                   <span class="value">管理员A</span>
                                </li>
                                <li>
-                                   <span>管理权限：</span>
-                                   <span>项目管理主管</span>
+                                   <span class="name">管理权限：</span>
+                                   <span class="value">项目管理主管</span>
                                </li>
                                <li>
-                                   <span>手机号：</span>
-                                   <span>18721605162</span>
+                                   <span class="name">手机号：</span>
+                                   <span class="value">18721605162</span>
                                </li>
                                <li>
-                                   <span>创建时间：</span>
-                                   <span>2016-10-23 12:56</span>
+                                   <span class="name">创建时间：</span>
+                                   <span class="value">2016-10-23 12:56</span>
                                </li>
                                <li>
-                                   <span> </span>
-                                   <span>
-                                        <!--<el-button type="primary" @click="onSubmit" style="width: 100px;">清除条件</el-button>-->
-                                   </span>
+                                   <el-button type="primary" size='middle'  style="width:200px;margin: 20px 0 20px 100px;" @click="dialogFormVisible = true">修改密码</el-button>
                                </li>
                            </ul>
                         </div>
@@ -62,14 +59,14 @@
   export default {
     data() {
       return {
-          dialogFormVisible:'true',
+          dialogFormVisible:false,
           fileList: [
             {
                 name: 'food.jpeg',
                 url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
             },
               {
-                    name: 'food2.jpeg',
+                  name: 'food2.jpeg',
                   url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
               }],
 
@@ -100,22 +97,27 @@
 <style >
     .user_info{
         font-size: 0;
+        border: 1px solid #DFE6EE;
     }
-    .user_info li span{
+    .user_info li{
+        border-bottom: 1px solid #DFE6EE;
+    }
+    .user_info li:last-child{
+        border-bottom: none;
+    }
+    .user_info li .name,.value{
         display: inline-block;
         height: 45px;
         line-height: 45px;
         font-size: 14px;
-        border: 1px solid #ccd0d2;
-        border-bottom:none;
-        border-right:none;
     }
-    .user_info li span:nth-child(1){
+    .user_info li .name{
         width:87px;
         text-align: right;
-        background: #c1dffd;
+        background: #F5FAFE;
+        border-right: 1px solid #DFE6EE;
     }
-    .user_info li span:nth-child(2){
+    .user_info li .value{
         width:363px;
         text-align: left;
         background: #fff;

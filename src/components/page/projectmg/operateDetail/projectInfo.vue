@@ -43,7 +43,7 @@
 			  @blur="handleInputConfirm"
 			>
 			</el-input>
-			<el-button v-else class="button-new-tag" size="small" @click="showInput">+ 添加</el-button>
+			<el-button v-else class="button-new-tag" type="warning" size="small" @click="showInput">+ 添加</el-button>
 			<span style="font-size:12px;color:#888">标签不超过5个字</span>
 		  </el-form-item>
 		  <el-form-item label="项目标题：">
@@ -88,7 +88,7 @@
 				<p class="uploadTip">图片尺寸760*305px    大小不得超过200K</p>
 			</el-col>
 		  </el-form-item>
-		  <el-form-item label="明星项目宣传图上传：">
+		  <el-form-item label="明星项目宣传图上传：" v-show="!showPro">
 		    <el-col :span='24'><el-checkbox v-model="checked">设为推荐明星项目</el-checkbox></el-col>
 			<el-col :span='8'>
 		    	<el-upload
@@ -149,6 +149,7 @@ import E from 'wangeditor'
 			}
 
 		},
+		props:{showPro:''},
 		mixins:[],
 		mounted(){
 			this.initEditorPC();

@@ -4,7 +4,8 @@ import project from 'components/page/projectmg/operate/project'
 import unOperateList from 'components/page/projectmg/unoperate/list'
 import deliveryList from 'components/page/projectmg/delivery/list'
 import operateDetail from 'components/page/projectmg/operateDetail/detail'
-
+import showDetail from 'components/page/projectmg/showDetail/detail'
+import deliveryDetail from 'components/page/projectmg/delivery/deliveryDetail'
 Vue.use(Router);
 
 export default new Router({
@@ -22,6 +23,8 @@ export default new Router({
                     {path:'/unOperateList',component:unOperateList},
                     {path:'/deliveryList',component:deliveryList},
                     {path:'/operateDetail',component:operateDetail},
+                    {path:'/showDetail',component:showDetail},
+                    {path:'/deliveryDetail',component:deliveryDetail},
                     {
                         path: '/content',
                         component: resolve => require(['../components/page/content/index.vue'], resolve)

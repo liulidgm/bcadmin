@@ -3,7 +3,7 @@
         <el-row :gutter="20" style="width: 1220px; margin: 20px auto;">
             <el-col :span="3" :offset="20">
                 <div class="grid-content bg-purple">
-                    <el-button type="primary"  style="width: 140px;">新增+</el-button>
+                    <el-button type="primary"  style="width: 140px;"  @click="isShow = true">新增+</el-button>
                 </div>
             </el-col>
         </el-row>
@@ -32,15 +32,16 @@
                     <el-button
                         type="primary"
                         size="small"
-                        @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                        @click="isShow = true">查看</el-button>
                     <el-button
                         size="small"
                         type="warning"
-                        @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+                        @click="cancleHandle"
+                       >删除</el-button>
                     <el-button
                         size="small"
                         type="primary"
-                        @click="handleDelete(scope.$index, scope.row)">设为默认</el-button>
+                        >设为默认</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -51,13 +52,16 @@
             style="width: 1220px;margin: 50px auto;text-align: center"
         >
         </el-pagination>
+        <addAppVersion :isShow="isShow" @isShowHandle="isShowHandle"></addAppVersion>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import addAppVersion from './addAppVersion.vue'
     export default {
         data() {
             return {
+                isShow:false,
                 form: {
                     region: '',
 
@@ -95,8 +99,30 @@
         },
         mounted() {
         },
-        methods: {},
-        components: {}
+        methods: {
+            isShowHandle() {
+              this.isShow = false;
+            },
+            cancleHandle() {
+                this.$confirm('确认删除该版本吗？', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning',
+                    center: false
+                }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
+            },
+        },
+        components: {addAppVersion}
     }
 </script>
 

@@ -3,7 +3,7 @@
         <el-row :gutter="20" style="width: 1220px; margin: 20px auto;">
             <el-col :span="3" :offset="20">
                 <div class="grid-content bg-purple">
-                    <el-button type="primary"  style="width: 140px;">新增管理员+</el-button>
+                    <el-button type="primary"  style="width: 140px;" @click="addHandle">新增管理员+</el-button>
                 </div>
             </el-col>
         </el-row>
@@ -49,19 +49,19 @@
                     <el-button
                         type="primary"
                         size="small"
-                        @click="handleEdit(scope.$index, scope.row)">停用</el-button>
+                        @click="stopHandle">停用</el-button>
                     <el-button
                         size="small"
                         type="primary"
-                        @click="handleDelete(scope.$index, scope.row)">编辑</el-button>
+                        @click="editHandle">编辑</el-button>
                     <el-button
                         size="small"
                         type="danger"
-                        @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+                        @click="cancleHandle">删除</el-button>
                     <el-button
                         size="small"
                         type="warning"
-                        @click="handleDelete(scope.$index, scope.row)">解锁</el-button>
+                        >解锁</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -72,16 +72,21 @@
             style="width: 1220px;margin: 50px auto;text-align: center"
         >
         </el-pagination>
+        <addForm :title="title" :userInfo="userInfo" :dialogFormVisible="dialogFormVisible"></addForm>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import addForm from './addForm.vue'
+
     export default {
         data() {
             return {
+                dialogFormVisible:false,
+                title:'',
+                userInfo:'',
                 form: {
                     region: '',
-
                 },
                 tableData: [{
                     date: '2016-05-03',
@@ -116,8 +121,53 @@
         },
         mounted() {
         },
-        methods: {},
-        components: {}
+        methods: {
+            stopHandle() {
+                this.$confirm('您确认停用该用户吗？', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning',
+                    center: false
+                }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
+            },
+            cancleHandle() {
+                this.$confirm('您确认删除该用户吗？', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning',
+                    center: false
+                }).then(() => {
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: '已取消删除'
+                    });
+                });
+            },
+            editHandle() {
+                this.title = '编辑管理员';
+                this.dialogFormVisible = true
+            },
+            addHandle() {
+                this.title = '新增管理员';
+                this.dialogFormVisible = true
+            }
+        },
+        components: {addForm}
     }
 </script>
 

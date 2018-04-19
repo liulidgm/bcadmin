@@ -32,7 +32,9 @@
 		    <el-tab-pane label="投资人" name="third">
 		    	<investor></investor>
 		    </el-tab-pane>
-		    <el-tab-pane label="融资回报" name="fourth">333333333</el-tab-pane>
+		    <el-tab-pane label="融资回报" name="fourth">
+		    	<financeReturnList></financeReturnList>
+		    </el-tab-pane>
 		</el-tabs>
 		<div style="margin-left:200px">
 			<el-button type="primary" @click="save">保存</el-button>
@@ -53,6 +55,7 @@ import financeReturn from './financeReturn'
 import projectInfo from './projectInfo'
 import projectProgress from './projectProgress'
 import investor from './investor'
+import financeReturnList from './financeReturnList'
 	export default{
 		data(){
 			return{
@@ -74,7 +77,7 @@ import investor from './investor'
 			}
 			
 		},
-		components:{factor,financeInfo,financeReturn,projectInfo,projectProgress,investor}
+		components:{factor,financeInfo,financeReturn,projectInfo,projectProgress,investor,financeReturnList}
 	}
 </script>
 <style>

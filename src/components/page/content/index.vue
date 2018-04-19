@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-tabs type="border-card" v-model="activeName2">
-            <el-tab-pane label="广告">
+            <el-tab-pane label="广告" name="first">
                 <el-tabs v-model="activeName" @tab-click="handleClick">
                     <el-tab-pane label="首页广告" name="first"><MainBanner></MainBanner></el-tab-pane>
                     <el-tab-pane label="APP启动页广告" name="second"><AppBanner></AppBanner></el-tab-pane>
@@ -32,8 +32,8 @@
   export default {
     data() {
       return {
-          activeName: 'second',
-          activeName2: 'four',
+          activeName: 'first',
+          activeName2: 'first',
           activeName3: 'first'
       };
     },
